@@ -1,0 +1,14 @@
+:host ::ng-deep .ck-editor__editable_inline {
+    min-height: 10000px;
+}
+
+
+.txtarea_lbl {
+    margin-bottom: 0px;
+ }.lbl_txt {
+    font-weight: 700;
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 12px;
+    width: 100%;
+ }
