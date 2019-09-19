@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { ViewEncapsulation } from '@angular/core';
 import {Inject} from '@angular/core';
+import {SataticdataService} from '../../staticpage/staticservice/sataticdata.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,22 +13,23 @@ import {Inject} from '@angular/core';
 export class SidebarComponent implements OnInit {
   public pageName = 'Job';
 
-  constructor(@Inject(Router) public router: Router) { }
+  constructor(@Inject(Router) public router: Router, public sataticdataService: SataticdataService) { }
 
   ngOnInit() {
   }
 
   @Input() callback: Function;
     redirectToHome() {
-        this.router.navigateByUrl('dashboard/home');
+        this.router.navigateByUrl('artist');
     }
     redirectToAbout() {
-        this.router.navigateByUrl('dashboard/about');
+        this.router.navigateByUrl('artist');
     }
     logMeOut(){
         this.router.navigateByUrl('login');
     }
     redirectToStaticpage(arg) {
+        this.sataticdataService.setStaticData(arg);
         console.log(arg);
         if(this.callback){
             this.callback(arg);
@@ -35,4 +37,5 @@ export class SidebarComponent implements OnInit {
             this.router.navigateByUrl('staticpage');
         }
     }
+
 }

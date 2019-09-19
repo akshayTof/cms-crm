@@ -26,15 +26,20 @@
   </div>
   <!-- /.box -->
 </section>
-
-<!-- <div [formGroup]="messageForm" (ngSubmit)="onSubmit()"> -->
+<!-- <div [formGroup]="staticpageForm" (ngSubmit)="onSubmit()"> -->
   <form  [formGroup]="staticpageForm" (ngSubmit)="onSubmit()">
     <label class="lbl_txt txtarea_lbl">Static Data <a href="javascript:;" class="verify_link hide">edit</a></label>
-<ckeditor #myEditor [editor]="Editor" formControlName="saticdata"></ckeditor>
-<button (click)="enable()">edit</button>
+    <input type="text" formControlName="staticdata" value= "{{activeStaticPageData.data[0].staticPageText}}" class="form-control"  >
+
+  <!-- <ckeditor [editor]="Editor" formControlName="[staticdata]"></ckeditor> -->
+  <button (click)="enable()">edit</button>
 <input type="submit" value="Submit" class="cta">
+
 </form>
 </div>
+
+
+
 <app-footer></app-footer>
 
 <!-- </div> -->

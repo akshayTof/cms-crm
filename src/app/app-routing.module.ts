@@ -14,7 +14,7 @@ const routes: Routes = [
   {
     path: 'artist', component: ArtistComponent,
     children: [
-      { path: 'about', component: AboutComponent },
+      { path: 'about', component: ArtistComponent },
       { path: 'home', component: ArtistcrudComponent }
     ]
   },

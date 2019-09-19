@@ -16,7 +16,7 @@ export class ArtistServiceService  {
 
 
   artistData;
-
+  artistInfo;
   // ----- another way ----
 
 
@@ -53,5 +53,12 @@ export class ArtistServiceService  {
     return of(products).pipe(delay(3000));
   }
 
+   // ------user set and get functions
+   setUser(data: any) {
+    this.artistInfo = data;
+  }
 
+  getUser() {
+    return this.artistInfo;
+  }
 }

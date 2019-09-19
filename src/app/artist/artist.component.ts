@@ -19,11 +19,8 @@ export class ArtistComponent implements OnInit {
   }
 
   userView(dataObj) {
-    //console.log(dataObj);
-    this.artistService.sendData(dataObj);
-    this.router.navigateByUrl('home');
-    // ------ Another way to send data ------
-    this.artistService.toggle(dataObj);
+    this.artistService.setUser(dataObj);
+     this.router.navigateByUrl('home');
   }
 
   userBlock() {

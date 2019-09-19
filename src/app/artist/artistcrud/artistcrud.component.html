@@ -1,35 +1,17 @@
-<div *ngIf="!artistGetData">
-<div *ngFor="let item of artistGetData">
+<h2 style="text-align:center">Artist Profile Card</h2>
 
-    <p>
-        artistcrud works!
-      </p>
-      <div >
-        here is the data
-       {{item | json}}
-       <!-- <div *ngFor="let item of artistGetData">
-          {{ item.first_name }} - {{ item.id }}
-        </div> -->
-
-      </div>
-
-      </div>
-</div>
-<div *ngFor="let item of artistGetData1">
-
-  {{ item.id}}
-
+<div class="card">
+  <img [src] ="artistShow.avatar ? artistShow.avatar : displayImage" alt="artist Image" style="width:100%">
+  <h1>{{artistShow.first_name}} {{artistShow.last_name}}</h1>
+  <p class="title">{{artistShow.email}}</p>
+  <p>Harvard University</p>
+  <div style="margin: 24px 0;">
+    <a ><i class="fa fa-dribbble"></i></a>
+    <a ><i class="fa fa-twitter"></i></a>
+    <a ><i class="fa fa-linkedin"></i></a>
+    <a ><i class="fa fa-facebook"></i></a>
+  </div>
+  <p><button>Contact</button></p>
 </div>
 
-
-<p *ngIf="!artistGetData1">Loading data ...</p>
-<ul>
-  <li *ngFor="let product of artistGetData1">{{ product.email }} costs {{ product.id }}</li>
-</ul>
-
-
-<p *ngIf="!products">Loading data ...</p>
-<ul>
-  <li *ngFor="let product of products">{{ product.name }} costs {{ product.price }}</li>
-</ul>
 
