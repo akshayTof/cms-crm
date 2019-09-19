@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { ArtistcrudComponent } from './artist/artistcrud/artistcrud.component';
+import { ArtistEditComponent } from './artist/artist-edit/artist-edit.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ArtistcrudComponent } from './artist/artistcrud/artistcrud.component';
     SidebarComponent,
     AboutComponent,
     FooterComponent,
-    ArtistcrudComponent
+    ArtistcrudComponent,
+    ArtistEditComponent
   ],
   imports: [
     BrowserModule,

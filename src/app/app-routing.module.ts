@@ -9,12 +9,16 @@ import { SidebarComponent } from './partials/sidebar/sidebar.component';
 import { AboutComponent } from './about/about.component';
 import { ArtistcrudComponent } from './artist/artistcrud/artistcrud.component';
 
+import { ArtistEditComponent } from './artist/artist-edit/artist-edit.component';
+
+
 const routes: Routes = [
   {
     path: 'artist', component: ArtistComponent,
     children: [
       { path: 'about', component: AboutComponent },
-      { path: 'home', component: ArtistcrudComponent }
+      { path: 'home', component: ArtistcrudComponent },
+      { path: 'edit-artist', component: ArtistEditComponent }
     ]
   },
   { path: 'home', component: ArtistcrudComponent },

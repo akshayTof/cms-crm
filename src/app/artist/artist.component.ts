@@ -40,6 +40,8 @@ export class ArtistComponent implements OnInit {
 
   userEdit() {
     console.log('yeah tytyty');
+
+    this.router.navigateByUrl('artist/edit-artist');
   }
 
 }
