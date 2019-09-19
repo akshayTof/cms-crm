@@ -8,6 +8,7 @@ import { PartialsComponent } from './partials/partials.component';
 import { SidebarComponent } from './partials/sidebar/sidebar.component';
 import { AboutComponent } from './about/about.component';
 import { ArtistcrudComponent } from './artist/artistcrud/artistcrud.component';
+import { Resolver } from './resolver';
 
 const routes: Routes = [
   {

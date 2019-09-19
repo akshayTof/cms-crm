@@ -1,4 +1,4 @@
-import { Component, OnInit, Injector } from '@angular/core';
+import { Component, OnInit, Injector, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { ArtistServiceService } from './artist-service.service';
 
@@ -15,16 +15,15 @@ export class ArtistComponent implements OnInit {
   ngOnInit() {
     this.artistService.getartist().subscribe(artistData => {
       this.artist = artistData;
-      console.log('this.artist');
     });
   }
 
   userView(dataObj) {
-    console.log(dataObj);
-
+    //console.log(dataObj);
     this.artistService.sendData(dataObj);
-    console.log('yeah itty21312');
     this.router.navigateByUrl('home');
+    // ------ Another way to send data ------
+    this.artistService.toggle(dataObj);
   }
 
   userBlock() {

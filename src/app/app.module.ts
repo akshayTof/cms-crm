@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { ArtistcrudComponent } from './artist/artistcrud/artistcrud.component';
+import { Resolver } from './resolver';
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import { ArtistcrudComponent } from './artist/artistcrud/artistcrud.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [Resolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

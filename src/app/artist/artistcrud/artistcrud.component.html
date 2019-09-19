@@ -1,15 +1,35 @@
-<div *ngIf="setData">
+<div *ngIf="!artistGetData">
+<div *ngFor="let item of artistGetData">
+
     <p>
         artistcrud works!
       </p>
       <div >
         here is the data
-       {{artistGetData.first_name}}
+       {{item | json}}
        <!-- <div *ngFor="let item of artistGetData">
           {{ item.first_name }} - {{ item.id }}
         </div> -->
 
+      </div>
 
       </div>
 </div>
+<div *ngFor="let item of artistGetData1">
+
+  {{ item.id}}
+
+</div>
+
+
+<p *ngIf="!artistGetData1">Loading data ...</p>
+<ul>
+  <li *ngFor="let product of artistGetData1">{{ product.email }} costs {{ product.id }}</li>
+</ul>
+
+
+<p *ngIf="!products">Loading data ...</p>
+<ul>
+  <li *ngFor="let product of products">{{ product.name }} costs {{ product.price }}</li>
+</ul>
 
